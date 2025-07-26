@@ -1,0 +1,19 @@
+{
+    "name": "insectaio/barqouq",
+    "description": "Barqouq storefront gRPC client SDK",
+    "autoload": {
+      "psr-4": {
+        "Barqouq\\Shopfront\\Product\\": "generated/barqouq_php/Barqouq/Shopfront/Product/",
+        "Barqouq\\Shared\\": "generated/barqouq_php/Barqouq/Shared/",
+        "GPBMetadata\\": [
+          "generated/barqouq_php/GPBMetadata/",
+          "generated/common_php/GPBMetadata/"
+        ]
+      }
+    },
+    "require": {
+      "insectaio/common": "^1.0",
+      "grpc/grpc": "^1.57",
+      "google/protobuf": "^4.31"
+    }
+  }
