@@ -41,9 +41,15 @@ class OrderRequest extends \Google\Protobuf\Internal\Message
      */
     protected $token = '';
     /**
+     * The session ID for the order, used to track the user's session during the order process.
+     *
+     * Generated from protobuf field <code>string order_session = 5 [json_name = "orderSession"];</code>
+     */
+    protected $order_session = '';
+    /**
      * The details of the order being processed, including items, quantities, and pricing.
      *
-     * Generated from protobuf field <code>.barqouq.shared.Order order = 5 [json_name = "order"];</code>
+     * Generated from protobuf field <code>.barqouq.shared.Order order = 6 [json_name = "order"];</code>
      */
     protected $order = null;
 
@@ -61,6 +67,8 @@ class OrderRequest extends \Google\Protobuf\Internal\Message
      *           A globally unique identifier for the request, used for tracking and correlation purposes.
      *     @type string $token
      *           A security token for authentication, ensuring the request is authorized.
+     *     @type string $order_session
+     *           The session ID for the order, used to track the user's session during the order process.
      *     @type \Barqouq\Shared\Order $order
      *           The details of the order being processed, including items, quantities, and pricing.
      * }
@@ -175,9 +183,35 @@ class OrderRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * The session ID for the order, used to track the user's session during the order process.
+     *
+     * Generated from protobuf field <code>string order_session = 5 [json_name = "orderSession"];</code>
+     * @return string
+     */
+    public function getOrderSession()
+    {
+        return $this->order_session;
+    }
+
+    /**
+     * The session ID for the order, used to track the user's session during the order process.
+     *
+     * Generated from protobuf field <code>string order_session = 5 [json_name = "orderSession"];</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setOrderSession($var)
+    {
+        GPBUtil::checkString($var, True);
+        $this->order_session = $var;
+
+        return $this;
+    }
+
+    /**
      * The details of the order being processed, including items, quantities, and pricing.
      *
-     * Generated from protobuf field <code>.barqouq.shared.Order order = 5 [json_name = "order"];</code>
+     * Generated from protobuf field <code>.barqouq.shared.Order order = 6 [json_name = "order"];</code>
      * @return \Barqouq\Shared\Order|null
      */
     public function getOrder()
@@ -198,7 +232,7 @@ class OrderRequest extends \Google\Protobuf\Internal\Message
     /**
      * The details of the order being processed, including items, quantities, and pricing.
      *
-     * Generated from protobuf field <code>.barqouq.shared.Order order = 5 [json_name = "order"];</code>
+     * Generated from protobuf field <code>.barqouq.shared.Order order = 6 [json_name = "order"];</code>
      * @param \Barqouq\Shared\Order $var
      * @return $this
      */
