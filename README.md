@@ -1,14 +1,19 @@
 # insectaio/barqouq
 
+[![Latest Version](https://img.shields.io/packagist/v/insectaio/barqouq.svg)](https://packagist.org/packages/insectaio/barqouq)
+[![Total Downloads](https://img.shields.io/packagist/dt/insectaio/barqouq.svg)](https://packagist.org/packages/insectaio/barqouq)
+
 PHP SDK for interacting with the Barqouq storefront via gRPC. Built using protobuf definitions from [buf.build/insecta/barqouq](https://buf.build/insecta/barqouq).
+
+**Latest version: v1.0.2**
 
 ## Installation
 
 ```bash
-composer require insectaio/barqouq
+composer require insectaio/barqouq:^1.0
 ```
 
-> Requires [`insectaio/common`](https://packagist.org/packages/insectaio/common) as a dependency.
+> Requires [`insectaio/common`](https://packagist.org/packages/insectaio/common) v1.0.1+ as a dependency.
 
 ## Usage
 
